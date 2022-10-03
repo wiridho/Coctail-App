@@ -8,6 +8,7 @@ import Navbar from './components/Navbar';
 import FooterSec from './components/FooterSec';
 import ContentApp from './components/ContentApp';
 import Search from './components/Search';
+import Category from './components/Category';
 
 function App() {
   // const { Footer } = Layout;
@@ -26,11 +27,21 @@ function App() {
     setQuery(e.target.value)
   }
 
+  const handleClickCategory = async (string) => {
+    try {
+      const res = await axios.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?c=${string}`)
+      setDatalist(res.data.drinks)
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
 
   return (
     <Layout className="layout">
       <div className=''>
         <Navbar />
+        <Category handleClickCategory={handleClickCategory} />
         <Search handleSearchChange={handleSearchChange} />
         <ContentApp datalist={datalist} />
         <FooterSec />

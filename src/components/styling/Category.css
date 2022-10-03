@@ -1,0 +1,12 @@
+.Category {
+
+    position: relative;
+    top: 15vh;
+
+
+    .site-button-ghost-wrapper {
+        padding: 26px 16px 16px;
+        background: rgb(255, 255, 255);
+        color: black;
+    }
+}
