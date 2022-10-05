@@ -11,7 +11,6 @@ import Search from './components/Search';
 import Category from './components/Category';
 
 function App() {
-  // const { Footer } = Layout;
   const [datalist, setDatalist] = useState('')
   const [query, setQuery] = useState('')
   const source = `https://www.thecocktaildb.com/api/json/v1/1/search.php?s=${query}`

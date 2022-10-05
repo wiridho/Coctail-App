@@ -1,6 +1,7 @@
 import React from 'react'
 import { useNavigate } from 'react-router-dom'
 import { Layout, Card, Row, Col } from 'antd'
+
 import '../App.css'
 const { Content } = Layout
 const { Meta } = Card
